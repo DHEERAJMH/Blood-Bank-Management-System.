@@ -1,0 +1,18 @@
+Flask==2.1.1  # Updated Flask version
+Flask-MySQLdb==0.2.0
+Flask-WTF==0.15.1  # Updated Flask-WTF version
+passlib==1.7.1
+Flask-Bootstrap==3.3.5.7
+Flask-Compress==1.4.0
+Flask-DebugToolbar==0.10.1
+Flask-Login==0.5.0  # Flask-Login for user authentication
+Flask-Mail==0.9.1
+Flask-Migrate==2.1.1
+Flask-Moment==1.0.2  # Updated Flask-Moment version
+Flask-OAuthlib==0.9.6  # Flask-OAuthlib for OAuth support
+Flask-PageDown==0.2.2
+Flask-RESTful==0.3.9  # Updated Flask-RESTful version
+Flask-Script==2.0.5
+Flask-Session==0.3.2  # Updated Flask-Session version
+Flask-SQLAlchemy==2.5.1  # Updated Flask-SQLAlchemy version
+Flask-Uploads==0.2.1

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron" style="background-color: #f7f7f7;">
+  <h1>Blood details here.</h1>
+  <hr class="my-4">
+  <form action="" method="POST">
+    <div class="form-group">
+      <label>Donor ID</label>
+      <input type="number" name="d_id" class="form-control" value={{ request.form.d_id }}>
+    </div>
+    <div class="form-group">
+      <label>Blood Group</label><br>
+      <select name="blood_group" class="form-control">
+        <option value="A+">A+</option>
+        <option value="B+">B+</option>
+        <option value="O+">O+</option>
+        <option value="AB+">AB+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="O-">O-</option>
+        <option value="AB-">AB-</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Packets Donated</label>
+      <input type="number" name="packets" class="form-control" value={{ request.form.packets }}>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

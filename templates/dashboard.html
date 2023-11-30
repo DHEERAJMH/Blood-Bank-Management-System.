@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron" style="background-color: #f7f7f7;">
+    <h1>Welcome {{ session.e_id }}</h1>
+    <hr class="my-4">
+    <table class="table table-striped">
+        <tr>
+            <th>Blood Group</th>
+            <th>Total Packets</th>
+        </tr>
+        {% set blood_group_totals = {} %}
+        {% for detail in details %}
+            {% set blood_group = detail.B_GROUP %}
+            {% set packets = detail.PACKETS %}
+            {% if blood_group in ['A+', 'B+', 'AB+', 'O+', 'A-', 'B-', 'AB-', 'O-'] %}
+                {% set current_total = blood_group_totals.get(blood_group, 0) + packets %}
+                {% set _ = blood_group_totals.update({blood_group: current_total}) %}
+            {% endif %}
+        {% endfor %}
+        {% for blood_group, total_packets in blood_group_totals.items() %}
+            <tr>
+                <td>{{ blood_group }}</td>
+                <td>{{ total_packets }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
